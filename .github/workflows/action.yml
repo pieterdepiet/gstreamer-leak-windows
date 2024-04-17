@@ -33,9 +33,8 @@ jobs:
           git clone https://github.com/Intel-Media-SDK/MediaSDK msdk
           cd msdk
           mkdir build && cd build
-          cmake -G 'MinGW Makefiles' ..
-          make
-          make install
+          cmake ..
+          msbuild
       # Runs a set of commands using the runners shell
       - name: Compile gstreamer
         run: |
