@@ -31,7 +31,7 @@ jobs:
 
       - name: Get onevpl
         run: |
-          $env:INTELMEDIASDKROOT = C:\Users\runneradmin\.nuget\packages\onevpl.devel.win-x64\2023.1.0.43419
+          $env:INTELMEDIASDKROOT = "C:\Users\runneradmin\.nuget\packages\onevpl.devel.win-x64\2023.1.0.43419"
           nuget install onevpl.devel.win-x64
       # Runs a set of commands using the runners shell
       - name: Compile gstreamer
