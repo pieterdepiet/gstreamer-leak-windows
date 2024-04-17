@@ -38,5 +38,5 @@ jobs:
          git clone https://gitlab.freedesktop.org/gstreamer/gstreamer
          pip3 install meson
          cd gstreamer
-         meson setup -Dbad=enabled -Dgst-plugins-bad:msdk=enabled builddir
+         INTELMEDIASDKROOT=C:\Users\runneradmin\.nuget\packages\onevpl.devel.win-x64\2023.1.0.43419 meson setup -Dbad=enabled -Dgst-plugins-bad:msdk=enabled builddir
          meson compile -C builddir
