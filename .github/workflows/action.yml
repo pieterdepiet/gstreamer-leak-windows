@@ -31,14 +31,14 @@ jobs:
           git clone https://github.com/Intel-Media-SDK/MediaSDK msdk
           cd msdk
           mkdir build && cd build
-          cmake -G 'Unix Makefiles' ..
-          make
-          make install
+          cmake ..
+          msbuild
       # Runs a set of commands using the runners shell
       - name: Compile gstreamer
         run: |
          git clone https://gitlab.freedesktop.org/gstreamer/gstreamer
          pip3 install meson
          cd gstreamer
+         export INTELMEDIASDKROOT=../msdk/build
          meson setup -Dbad=enabled -Dgst-plugins-bad:msdk=enabled builddir
          meson compile -C builddir
