@@ -32,7 +32,6 @@ jobs:
       - name: Get onevpl
         run: |
           nuget install onevpl.devel.win-x64
-          nuget install oneVPL.runtimewin-x64
       # Runs a set of commands using the runners shell
       - name: Compile gstreamer
         run: |
