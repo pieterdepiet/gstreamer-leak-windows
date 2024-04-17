@@ -25,11 +25,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v1
-      - uses: BSFishy/meson-build@v1.0.3
 
       # Runs a set of commands using the runners shell
       - name: Compile gstreamer
         run: |
          git clone https://gitlab.freedesktop.org/gstreamer/gstreamer
-         meson -Dbad=enabled -Dgst-plugins-bad:msdk=enabled builddir
+         pip3 install meson
+         meson setup -Dbad=enabled -Dgst-plugins-bad:msdk=enabled builddir
          meson compile -C builddir
