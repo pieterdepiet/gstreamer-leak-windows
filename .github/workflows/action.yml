@@ -31,7 +31,7 @@ jobs:
           git clone https://github.com/Intel-Media-SDK/MediaSDK msdk
           cd msdk
           mkdir build && cd build
-          cmake -G Makefile ..
+          cmake -G 'Unix Makefiles' ..
           make
           make install
       # Runs a set of commands using the runners shell
