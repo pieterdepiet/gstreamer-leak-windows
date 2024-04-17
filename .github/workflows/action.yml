@@ -31,5 +31,6 @@ jobs:
         run: |
          git clone https://gitlab.freedesktop.org/gstreamer/gstreamer
          pip3 install meson
+         cd gstreamer
          meson setup -Dbad=enabled -Dgst-plugins-bad:msdk=enabled builddir
          meson compile -C builddir
